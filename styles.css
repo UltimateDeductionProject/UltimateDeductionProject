@@ -1,4 +1,120 @@
 body {
 	background:#0d1624;
 	font-family: "Trebuchet MS";
+	text-align:justify;
+	margin:0;
+}
+
+p {
+	color:#aaa;
+}
+
+h1 {
+	color:#999;
+	text-align:center;
+}
+
+.mainText {
+	width:80vw;
+	margin:0 auto;
+	letter-spacing:1;
+	line-height:1.6;
+}
+
+.field {
+	background:#333;
+	border:3px solid #333;
+	border-radius:6px;
+	padding:5px;
+	resize:vertical;
+	display:block;
+	width:100%;
+	margin-bottom:10px;
+	outline:none;
+	color:#bbb;
+	font-size:80%;
+	font-family: "Arial";
+	letter-spacing:1;
+}
+
+.button {
+	background:#333;
+	border:3px solid #333;
+	border-radius:6px;
+	padding:4px 6px;
+	display:block;
+	margin-bottom:10px;
+	outline:none;
+	float:right;
+	color:#888;
+	font-weight:bold;
+}
+
+.button:hover {
+	cursor:pointer;
+}
+
+.button:active {
+	background:#444;
+	border-color:#444;
+}
+
+.form {
+	width:30vw;
+	margin:0 auto;
+	color:#666;
+	//font-weight:bold;	
+}
+
+form textarea {
+	height:80px;
+	min-height:50px;
+}
+
+.deJump {
+	margin-left:calc(100vw - 100%);
+}
+
+iframe {
+	margin:80 auto;
+	display:block;
+	clear:both;
+}
+
+.menu {
+	background:#490020;
+	margin:0;
+	opacity:0.75;
+}
+
+.menu a {
+	padding:10px 18px;
+	text-decoration:none;
+	//color:#ccc;
+	display:block;
+	font-size:18px;
+}
+
+.menu a:not(.active) {
+	color:#ccc;
+}
+
+.menu ul {
+	display:table;
+	list-style:none;
+	margin:0 auto;
+}
+
+.menu li {
+	display:block;
+	float:left;
+}
+
+.active, a:hover {
+	color:white;
+	background:#5B0A35;
+}
+
+.menu li:not(:last-child) {
+	border-right:1px #ddd solid; /*menu divider*/
 }

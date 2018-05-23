@@ -3,8 +3,76 @@
 <title>Submissions</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
-<h1>Hello world</h1>
+<div class="menu">
+<div class="deJump">
+<div style="margin-left:-30px; ">
+<ul>
+	<li><a href="#">articles</a></li>
+	<li><a href="index.html" class="active">submissions</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="deJump">
+<div class="mainText">
+<h1>explanation:</h1>
+<p>This all started about six months ago. I was frustrated at the political realm, and the extent to which the decisions in this world are based on mere opinions. I started to dream of a truly rational world, where all decisions are made through pure logic. And not only dream - I started to plan it.</p>
+
+<p>However, I quickly crashed into a brick wall. There would be no rational decisons without something to aim at. Only when you know your goal can you start thinking of the rational ways to achieve it. Now I would need to come up with a goal for my society. And so the pondering continues...</p>
+
+<p>Should our goal be the preservation of the human species? Or of human consciousness? How about maximizing human happiness? I found flaws with each one of these - with every potential objective I could think of. I finally stumbled upon something that seemed to work better than anything before. Something that nicely captured everything I value. I proposed mazimizing free will as the objective. And not in the sense that we have a magical power to just decide stuff outside of natural laws. With free will I meant hard decisons - deciding through reason over emotion. Pursuing complex decision processes over more simple ones.</p>
+
+<p>By this definition, the most free will we have come across in any system is in the human brain. The human brain has the simple process of emotion, of eating the chocolate bar when the hormones say so, or deciding to scratch when you're itchy. That's a level of decision making we're able to build into a simple robot, it's present in the simplest animals too. That isn't the high level of free will I'm talking about. However, when, despite your irresistable urge to eat that chocolate bar, you rationally decide to pick the apple instead, you've demonstrated free will.</p>
+
+<p>It later turned out that free will wasn't the ultimate goal. That it was merely a tool, not the objective. Now is your turn to find the Ultimate Goal. Leave your answers below. This experiment has the potential to demonstrate my hypothesis, that a system developed enough will always find the same Ultimate Goal. After that, all we need to do is to start working, onto a new era in the history of logic, in the history of our humble human species. Let's take the next societal leap.</p>
+<div class="form">
+	<form id="UDform" method="POST" action="" target="no-target">
+		ultimate goal:
+		<input type="text" class="field" name="goal" id="input-goal" required>
+		reasoning:
+		<textarea class="field" name="reasoning" id="input-reasoning" required></textarea>
+		email:
+		<input type="text" class="field" name="email" id="input-email" required>
+		<input type="submit" class="button" value="submit" id="form-submit">
+	</form>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FLw0B62LAhA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+</div>
+</div>
+
+<!--<form id="input-form" action="" method="POST" target="no-target">
+  <input id="input-q1" placeholder="q1" name="q1">
+  <input id="input-q2" placeholder="q2" name="q2">
+  <button id="form-submit" type="submit">SUBMIT</button>
+</form>-->
+
+<p id="input-feedback"></p>
+
+<iframe src="#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
+
+<script>
+    $('#UDform').one('submit',function(){
+        var inputq1 = encodeURIComponent($('#input-goal').val());
+        var inputq2 = encodeURIComponent($('#input-reasoning').val());
+		var inputq3 = encodeURIComponent($('#input-email').val());
+        var q1ID = "entry.1512778405";
+        var q2ID = "entry.968697253";
+		var q3ID = "entry.2013250982";
+        var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdwbgJldOAYlkS5r6FruB8fqXuk-OPRsdgCQcXyQF5JWaPYfw/formResponse?';
+        var submitRef = '&submit=Submit';
+        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + "&" + q3ID + "=" + inputq3 + submitRef);
+        console.log(submitURL);
+        $(this)[0].action=submitURL;
+        //$('#input-feedback').text('Thank You!');
+		window.location = "success.html"
+    });
+</script>
+
 </body>
 </html>
