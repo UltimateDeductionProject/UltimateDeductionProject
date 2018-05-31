@@ -7,6 +7,18 @@ body {
 	min-width:800px;
 }
 
+a:link, a:visited {
+	color:#555;
+}
+
+a:active, a:hover {
+	color:#999;
+}
+
+::selection {
+	background:#934065;
+}
+
 p {
 	color:#bbb;
 }
@@ -14,6 +26,7 @@ p {
 h1 {
 	color:#999;
 	text-align:center;
+	margin-top:20px;
 }
 
 .mainText {
@@ -145,13 +158,19 @@ ul.slabs li {
 	border-bottom:2px solid #666;
 	//margin-bottom:-1px;
 	width:100%;
-	background:#555;
+	//background:#555;
 	height:200px;
-	padding:10px;
+	//padding:10px;
+	padding:0; /*switch the padding to the two divs*/
 	overflow:hidden;
 	//text-overflow:ellipsis;
 	//box-shadow: 0 0 10px 15px white inset;
 	position:relative;
+	background:rgba(85, 85, 85, 0.6);
+}
+
+//ul.slabs li:not(:last-child) {
+	border-bottom:2px solid #666;
 }
 
 ul.slabs li p {
@@ -161,22 +180,33 @@ ul.slabs li p {
 	//text-overflow:ellipsis;
 }
 
-.slabs li:after{
+.slabs li/* div:last-child*/:after{ /* added 'div:last-child'*/
     content: "";
-    position: absolute; top: 0; bottom: 0; left: -15px; right: -15px;
-    box-shadow: inset #555 0 -15px 10px;
-	pointer-events:none;
+    position: absolute; top: 0; bottom: 0; left: 220px; right: -15px;
+    box-shadow: inset #3E4550 0 -15px 10px;
+	pointer-events: none;
 }
 /*source https://stackoverflow.com/a/22560362*/
 
+//ul.slabs li div {
+	//margin:4px;
+}
+
 ul.slabs li div:first-child {
-	width: 25%;
+	width: 200px; /*MAKE INTO A PIXEL VALUE*/
+	//min-width:200px; /*same as li height*/
 	float:left;
+	//padding:10px;
+	margin:4px;
 }
 
 ul.slabs li div:last-child {
-	width: 75%;
+	width: calc(100% - 240px);
 	float:right;
+	//position:relative; /*this was before in the li. It isn't perfect as it now cuts off in the middle always*/
+	//padding:20px;
+	margin:10px;
+	margin-right:20px;
 }
 
 h2 {
@@ -184,4 +214,30 @@ h2 {
 	color:#999;
 	margin-top:10px;
 	//text-align:left;
+}
+
+.goBack {
+	height:60px;
+	width:100px;
+	position:fixed;
+	left:0;
+	top:5%;
+	background:#700032;
+	text-align:center;
+	text-decoration:none;
+	line-height:60px;
+	font-size:120%;
+	font-weight:bold;
+}
+
+a.goBack:link, a.goBack:visited {
+	color:#aaa;
+}
+
+.background {
+	background:rgba(85, 85, 85, 0.4);
+	width:80vw;
+	margin:20px auto;
+	padding:20px;
+	min-width:400px;
 }
