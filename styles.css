@@ -182,7 +182,7 @@ ul.slabs li p {
 
 .slabs li/* div:last-child*/:after{ /* added 'div:last-child'*/
     content: "";
-    position: absolute; top: 0; bottom: 0; left: 220px; right: -15px;
+    position: absolute; top: 0; bottom: 0; left: 210px; right: -15px;
     box-shadow: inset #3E4550 0 -15px 10px;
 	pointer-events: none;
 }
